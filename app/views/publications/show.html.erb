@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @publication.title %>
+</p>
+
+
+<p>
+  <b>Description:</b>
+  <%= @publication.description %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @publication.date %>
+</p>
+
+  <b>Imagen:</b>
+  <%= @publication.image_file_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %> 
+
+<%= image_tag @publication.image.url(:medium) %> 
+<%= image_tag @publication.image.url(:thumb) %>
